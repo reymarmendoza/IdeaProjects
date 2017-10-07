@@ -1,0 +1,36 @@
+package primero;
+
+public class Human{
+
+    char gender; // F or M
+    String firstName, lastName;
+    int idNumber;
+    int yearBirth, monthYear, dayBirth;
+
+    Human partner;
+
+    public void speak(String words){
+        System.out.println(words);
+    }
+
+    public void setId(int id){
+        idNumber = id;
+    }
+
+    public int getId(){
+        return idNumber;
+    }
+
+    public String getFullName(){
+        return this.firstName + " " + this.lastName;
+    }
+
+    public void addPartner(Human humanCouple){
+        this.partner = humanCouple;
+        humanCouple.partner = this;
+    }
+
+    public Human getPartner(){
+        return this.partner;
+    }
+}
